@@ -1,3 +1,4 @@
+import sys, re
 class Handler:
     def callback(self, prefix, name, *args):
         method = getattr(self, prefix+name, None)  #return the method we need, and check if callable
@@ -42,4 +43,36 @@ class HTMLRender(Handler):
     def sub_mail(self, match):
         return '<a href="mailto:%s">%s</a>' % (match.group(1), match.group(1))
     def feed(self, data):
-        print data
+        if data[0:13] != 'table_note_rp':
+            print(data)
+            return
+
+        data = re.sub('table_note_rp', '', data)
+        data = data.splitlines()
+        first_line = 1
+        for row in data:
+            print('<tr>')
+            words = row.split()
+            first_column = 1
+
+            for word in words:
+                if first_column or first_line:
+                    first_column = 0
+                    print('<th>')
+                    print(word)
+                    print('</th>')
+                else:
+                    print('<td>')
+                    print(word)
+                    print('</td>')
+
+            print('</tr>')
+            first_line = 0
+
+
+
+
+
+
+
+#some space

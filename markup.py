@@ -33,7 +33,7 @@ class BasicTextParser(Parser):
         self.addRule(TableRule())
         self.addRule(ParagraphRule())
         self.addFilter(r'\*(.+?)\*', 'emphasis')
-        self.addFilter(r'([A-Z0-9/][A-Z0-9/]+)', 'emphasis')
+        self.addFilter(r'([A-Z0-9/]+[A-Z/][A-Z0-9/]+)', 'emphasis')
         self.addFilter(r'(https://[\.a-zA-Z/]+)','url')
         self.addFilter(r'([\.a-zA-Z0-9/]+@[\.a-zA-Z0-9/]+)', 'mail')
 
