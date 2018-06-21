@@ -27,14 +27,6 @@ class HTMLRender(Handler):
         print('<h2>')
     def end_heading(self):
         print('</h2>')
-    def start_list(self):
-        print('<ul>')
-    def end_list(self):
-        print('</ul>')
-    def start_listitem(self):
-        print('<li>')
-    def end_listitem(self):
-        print('</li>')
     def start_title(self):
         print('<h1>')
     def end_title(self):

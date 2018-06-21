@@ -27,14 +27,14 @@ class Parser:
 class BasicTextParser(Parser):
     def __init__(self, handler):
         Parser.__init__(self, handler)
-        self.addRule(ListRule())
-        self.addRule(ListItemRule())
         self.addRule(TitleRule())
         self.addRule(HeadingRule())
         self.addRule(ParagraphRule())
         self.addFilter(r'\*(.+?)\*', 'emphasis')
+        self.addFilter(r'([A-Z0-9/][A-Z0-9/]+)', 'emphasis')
         self.addFilter(r'(https://[\.a-zA-Z/]+)','url')
-        self.addFilter(r'([\.a-zA-Z]+@[\.a-zA-Z]+edu)', 'mail')
+        self.addFilter(r'([\.a-zA-Z0-9/]+@[\.a-zA-Z0-9/]+)', 'mail')
+
 
 handler = HTMLRender()
 parser = BasicTextParser(handler)
