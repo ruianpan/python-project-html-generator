@@ -1,13 +1,14 @@
-Welcome to VanDarkHome.org
+    Welcome to VanDarkHome.org
 
-This website features Van DarkHolme and his buddies, with fisting, suction and lots of other fun. The base of the site is located in Urbana, Illinois, USA, 3026 ECEB.
+    This website features Van DarkHolme and his buddies, with fisting, suction and lots of other fun. The base of the site is located in Urbana, Illinois, USA, 3026 ECEB.
 
-A short history of the organization
+	A short history of the organization
+	
+    VanDarkHome.org is founded by Ke Wang, a dark lord and dungeon master,  also known as Teacher Sun. The concept of the organization is to spread the fun and philosophy of the lord himself and the embodiment of his will, TEACHER SUN. 
 
-VanDarkHome.org is founded by Ke Wang, a dark lord and dungeon master,  also known as Teacher Sun. The concept of the organization is to spread the fun and philosophy of the lord himself and the embodiment of his will, TEACHER SUN. 
+team_member    power_eng_level     times_killer_in_ow
+zhy            5                   1000
+zl             1000                0
 
 
-
-
-
-Contact: ruianp2@illinois.edu  :
+    Contact: ruianp2@illinois.edu  :

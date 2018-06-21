@@ -1,3 +1,4 @@
+import re
 class Rule:
     def action(self, block, handler):   #use handler to do the actions
         handler.start(self.type)
@@ -17,6 +18,13 @@ class TitleRule(HeadingRule):
         if not self.first: return False
         self.first = False
         return HeadingRule.condition(self,block)
+
+class TableRule(Rule):
+    type = 'table'
+    def condition(self, block):
+        if block[0:13] == "table_note_rp":
+            return True
+        return False
 
 
 

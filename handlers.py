@@ -15,6 +15,10 @@ class Handler:
 
 
 class HTMLRender(Handler):
+    def start_table(self):
+        print('<table border="1">')
+    def end_table(self):
+        print('</table>')
     def start_document(self):
         print('<html><head><title>...</title></head><body>')
     def end_document(self):

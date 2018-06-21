@@ -29,6 +29,8 @@ class BasicTextParser(Parser):
         Parser.__init__(self, handler)
         self.addRule(TitleRule())
         self.addRule(HeadingRule())
+
+        self.addRule(TableRule())
         self.addRule(ParagraphRule())
         self.addFilter(r'\*(.+?)\*', 'emphasis')
         self.addFilter(r'([A-Z0-9/][A-Z0-9/]+)', 'emphasis')
