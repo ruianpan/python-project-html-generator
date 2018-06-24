@@ -37,7 +37,8 @@ class BasicTextParser(Parser):
         self.addFilter(r'(https://[\.a-zA-Z/]+)','url')
         self.addFilter(r'([\.a-zA-Z0-9/]+@[\.a-zA-Z0-9/]+)', 'mail')
 
-
-handler = HTMLRender()
-parser = BasicTextParser(handler)
-parser.parse(sys.stdin)
+def outside_call(input, output):
+    handler = HTMLRender()
+    parser = BasicTextParser(handler)
+    sys.stdout = output
+    parser.parse(input)
